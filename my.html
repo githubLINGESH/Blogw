@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Finance Guide</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="my.css">
+<style>
+    #getStartedBtn {
+        transition: transform 0.5s ease-out;
+    }
+
+    .hide {
+        transform: translateY(-100%);
+    }
+    
+    .step-list {
+        list-style-position: inside;
+    }
+    
+    .step-item {
+        margin-bottom: 20px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Google Finance Guide</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#features">Features</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#resources">Resources</a>
+        </li>
+        </ul>
+    </div>
+    </nav>
+</header>
+
+<section id="home">
+    <div class="container">
+    <h1>Welcome to the Google Finance Guide</h1>
+    <p>Learn how to effectively use Google Finance for your financial research and analysis.</p>
+    <a href="#" class="btn btn-primary" id="getStartedBtn">Get Started</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+    <h2>About Google Finance Guide</h2>
+    <p>Level up your finance insights with the Google Finance Guide.</p>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="my.js"></script>
+<script>
+    // Add event listener to "Get Started" button
+    document.getElementById("getStartedBtn").addEventListener("click", function() {
+        // Display the instructions (replace with your own content)
+        var instructions = document.createElement("div");
+        instructions.classList.add("text-center"); // Add text-center class for center alignment
+        instructions.innerHTML = `
+        <h2 style="font-size:70px;">Getting Started with Google Finance</h2>
+        <ol class="">
+            <li class="step-item">
+                <h2 style="font-size:40px; font-weight:bold;">Step 1</h2>
+                <h4 style="font-size:40px;">Go to the Google Finance website.</h4>
+                <p>
+                    <img src="3.png" width="1600">
+                </p>
+            </li>
+            <li class="step-item">
+                <h2 style="font-size:40px; font-weight:bold;">Step 2</h2>
+                <h4 style="font-size:40px;">Search for a specific stock using the search bar.</h4>
+                <p>
+                    <img src="2.png" width="1600">
+                </p>
+            </li>
+            <li class="step-item">
+                <h2 style="font-size:40px; font-weight:bold;">Step 3</h2>
+                <h4 style="font-size:40px;">Explore the stock details, charts, and news.</h4>
+                    <img src="1.png" width="1600">
+            </li>
+            <li class="step-item">
+                <h2 style="font-size:40px; font-weight:bold;">Step 4</h2>
+                <h4 style="font-size:40px;">Customize your portfolio and track your favorite stocks.</h4>
+                <p>
+                    <img src="4.png" width="1600">
+                </p>
+            </li>
+        </ol>
+        `;
+        // Insert the instructions above the "About Google Finance" section
+        var aboutSection = document.getElementById("about");
+        aboutSection.parentNode.insertBefore(instructions, aboutSection);
+        
+        // Hide the "Get Started" button with a swipe-up animation
+        var getStartedBtn = document.getElementById("getStartedBtn");
+        getStartedBtn.classList.add("hide");
+        
+        // Remove the "Get Started" button after it is clicked
+        getStartedBtn.remove();
+    });
+</script>
+
+<section id="features">
+    <div class="container">
+    <h2>Key Features of Google Finance</h2>
+    <div class="row">
+        <div class="col-md-4">
+        <div class="feature-item">
+            <i class="fa fa-chart-line"></i>
+            <h3>Real-Time Stock Quotes</h3>
+            <p>Access up-to-date stock quotes and track market trends.</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="feature-item">
+            <i class="fa fa-search"></i>
+            <h3>Comprehensive Stock Search</h3>
+            <p>Efficiently search for specific stocks and view detailed information.</p>
+        </div>
+        </div>
+        <div class="col-md-4">
+        <div class="feature-item">
+            <i class="fa fa-newspaper"></i>
+            <h3>Financial News</h3>
+            <p>Stay updated with the latest financial news and market insights.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<section id="resources">
+    <div class="container">
+    <h2>Additional Resources</h2>
+    <div class="row">
+        <div class="col-md-6">
+        <div class="resource-item">
+            <i class="fa fa-file"></i>
+            <h3>Beginner's Guide to Google Finance</h3>
+            <p>Learn the basics of using Google Finance for beginners.</p>
+        </div>
+        </div>
+        <div class="col-md-6">
+        <div class="resource-item">
+            <i class="fa fa-video"></i>
+            <h3>Video Tutorials</h3>
+            <p>Watch step-by-step video tutorials on using Google Finance effectively.</p>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+    <p>&copy; 2023 Google Finance Guide. All rights reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
