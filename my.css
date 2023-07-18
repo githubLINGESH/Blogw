@@ -185,3 +185,32 @@ footer {
         padding: 20px;
     }
 }
+
+#getStartedBtn {
+    transition: transform 0.5s ease-out;
+}
+
+.hide {
+    transform: translateY(-100%);
+}
+
+.step-list {
+    list-style-position: inside;
+}
+
+.step-item {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Update image size for responsiveness */
+img.bag-image {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
